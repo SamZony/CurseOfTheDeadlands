@@ -33,16 +33,19 @@ namespace GameUI.Panels
 
             if (isWinPanel)
                 SoundManager.Instance.PlayMissionPassed();
-            else 
+            else
                 SoundManager.Instance.PlayMissionFailed();
         }
 
         private void LoadNextMission()
         {
             var nextMissionIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            Debug.Log($"Mission name: {nextMissionIndex}");
             Scene nextMission = SceneManager.GetSceneByBuildIndex(nextMissionIndex);
+
             PlayerPrefs.SetString("SelectedMission", nextMission.name);
             SceneManager.LoadScene("LoadingScreen");
+            MainUICanvas.Instance.DisableEveryPanel();
         }
 
         private void ToMainMenu()
@@ -61,6 +64,7 @@ namespace GameUI.Panels
                 player.transform.position = GameManager.Instance.LoadCheckpointPosition();
 
             }
+            MainUICanvas.Instance.DisableEveryPanel();
 
         }
 
@@ -69,6 +73,9 @@ namespace GameUI.Panels
             Time.timeScale = 1;
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            MainUICanvas.Instance.DisableEveryPanel();
+
         }
 
         private void OnDisable()

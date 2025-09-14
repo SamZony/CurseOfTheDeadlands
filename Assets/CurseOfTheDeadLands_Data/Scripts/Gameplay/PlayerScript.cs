@@ -14,6 +14,6 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.ShowHUD();
+        GameManager.Instance.ToggleHUD(true);
     }
 }

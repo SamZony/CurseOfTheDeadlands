@@ -443,3 +443,10 @@ MonoBehaviour:
     goBack: {fileID: 0}
     startGame: {fileID: 0}
     pauseGame: {fileID: 0}
+    missionBgm: {fileID: 8300000, guid: 952fc90d22914c24e9d87264d1f7c355, type: 3}
+    fightBgm: {fileID: 8300000, guid: 7f1bf1cdc481c274594de5d79709b29d, type: 3}
+    zombieChase: {fileID: 8300000, guid: 1e232112a2c350a418af43e0ec4c67d0, type: 3}
+    zombieDie: {fileID: 8300000, guid: fe8b97343e95d7b41b037d73b416651a, type: 3}
+    playerHurt: {fileID: 0}
+    MissionFailed: {fileID: 8300000, guid: d17a78a1511d0354688bf85e6411aea9, type: 3}
+    MissionPassed: {fileID: 8300000, guid: 7b6fb2154577eb544aee9a8979cd2d0e, type: 3}

@@ -1,4 +1,7 @@
 using GameUI;
+using Invector.vShooter;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +9,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public string checkpointPlayerPref;
+
+    [Header("References")]
+    [Tooltip("The objects which have to be disabled when Main UI is in action or they will interfere.")]
+    public List<GameObject> objectsAgainstMainUI;
 
     [Header("Mission Parameters")]
     public int enemiesDead = 0;
@@ -36,9 +43,9 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.sourceBGM.clip = SoundManager.Instance.audioClips.missionBgm;
         SoundManager.Instance.sourceBGM.Play();
     }
-    public void ShowHUD()
+    public void ToggleHUD(bool toggle)
     {
-            MainUICanvas.Instance.gameHUDPanel.gameObject.SetActive(true);
+            MainUICanvas.Instance.gameHUDPanel.gameObject.SetActive(toggle);
     }
 
 
@@ -64,10 +71,22 @@ public class GameManager : MonoBehaviour
 
     public void FailMission()
     {
+        for (int i = 0; i < objectsAgainstMainUI.Count; i++)
+        {
+            objectsAgainstMainUI[i].SetActive(false);
+        }
+        ToggleHUD(false);
+
         MainUICanvas.onMissionFail?.Invoke();
     }
     public void PassMission()
     {
+        for (int i = 0; i < objectsAgainstMainUI.Count; i++)
+        {
+            objectsAgainstMainUI[i].SetActive(false);
+        }
+        ToggleHUD(false);
+
         MainUICanvas.onMissionPass?.Invoke();
     }
 
@@ -76,12 +95,23 @@ public class GameManager : MonoBehaviour
         if (isGameplayPaused)
         {
             Time.timeScale = 1;
+            for (int i = 0; i < objectsAgainstMainUI.Count; i++)
+            {
+                objectsAgainstMainUI[i].SetActive(true);
+            }
+            ToggleHUD(true);
+
             isGameplayPaused = false;
             MainUICanvas.Instance.pausePanel.SetActive(false);
         }
         else
         {
             Time.timeScale = 0;
+            for (int i = 0; i < objectsAgainstMainUI.Count; i++)
+            {
+                objectsAgainstMainUI[i].SetActive(false);
+            }
+            ToggleHUD(false);
 
             isGameplayPaused = true;
             MainUICanvas.Instance.pausePanel.SetActive(true);
