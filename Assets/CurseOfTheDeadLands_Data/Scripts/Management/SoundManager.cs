@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource sourceBGM;
     public AudioSource sourceLooped;
     public AudioSource sourceOneShot;
+    public AudioSource sourceOneShotPlayer;
 
     [Space]
     public AudioClips audioClips;
@@ -67,7 +69,7 @@ public class SoundManager : MonoBehaviour
     public void PlayZombieChase()
     {
         sourceOneShot.PlayOneShot(audioClips.zombieChase);
-        sourceBGM.clip = audioClips.fightBgm;
+        sourceOneShot.clip = audioClips.fightBgm;
     }
 
     public void PlayZombieDie()
@@ -77,7 +79,11 @@ public class SoundManager : MonoBehaviour
 
     public void PlayPlayerHurt()
     {
-        sourceOneShot.PlayOneShot(audioClips.playerHurt);
+        // Randomly pick one of the hurt clips
+        var audioClips = this.audioClips.playerHurt;
+        var index = UnityEngine.Random.Range(0, audioClips.Count);
+
+        sourceOneShotPlayer.PlayOneShot(this.audioClips.playerHurt[index]);
     }
 
     public void PlayMissionFailed()
@@ -106,7 +112,7 @@ public class SoundManager : MonoBehaviour
         public AudioClip fightBgm;
         public AudioClip zombieChase;
         public AudioClip zombieDie;
-        public AudioClip playerHurt;
+        public List<AudioClip> playerHurt;
         public AudioClip MissionFailed;
         public AudioClip MissionPassed;
 

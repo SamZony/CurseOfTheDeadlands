@@ -142,8 +142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.0596716, y: 1, z: 5.0533605}
+  m_Center: {x: -0.52983814, y: -0.000004431501, z: 2.0266817}
 --- !u!114 &114000013532939854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,9 +268,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   meleeManager: {fileID: 0}
-  meleeType: 2
+  meleeType: 1
   useStrongAttack: 1
-  distanceToAttack: 1
+  distanceToAttack: 2
   attackID: 1
   movesetID: 2
   staminaCost: 30
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   audioSource: {fileID: 106114, guid: dfea19d1d34dd174d87195f78cb44ae7, type: 3}
   hitSounds:

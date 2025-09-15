@@ -51,6 +51,8 @@ namespace GameUI.Panels
         private void ToMainMenu()
         {
             Time.timeScale = 1;
+            MainUICanvas.Instance.DisableEveryPanel();
+
             SceneManager.LoadScene(0);
         }
 
@@ -72,9 +74,9 @@ namespace GameUI.Panels
         {
             Time.timeScale = 1;
 
+            MainUICanvas.Instance.DisableEveryPanel();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-            MainUICanvas.Instance.DisableEveryPanel();
 
         }
 

@@ -198,6 +198,9 @@ namespace GameUI
             missionSelectPanel.panelObject.SetActive(false);
             newGamePanel.panelObject.SetActive(false);
             optionsPanel.panelObject.SetActive(false);
+            missionFailPanel.SetActive(false);
+            missionPassPanel.SetActive(false);
+            gameHUDPanel.gameObject.SetActive(false);
         }
         private void BuildTree()
         {

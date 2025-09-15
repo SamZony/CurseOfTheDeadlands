@@ -387,6 +387,135 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2926939531449542708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5965698941124846908}
+  - component: {fileID: 1330468981465416847}
+  m_Layer: 0
+  m_Name: Source_OneShot_Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5965698941124846908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2926939531449542708}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 680282724212011895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1330468981465416847
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2926939531449542708}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 200
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.508
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6994980590594506795
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +549,7 @@ Transform:
   - {fileID: 8541103903290804924}
   - {fileID: 5107908005624955}
   - {fileID: 9148456803512619008}
+  - {fileID: 5965698941124846908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8347666757508524792
@@ -437,6 +567,7 @@ MonoBehaviour:
   sourceBGM: {fileID: 6966267389346597253}
   sourceLooped: {fileID: 7766499040418552988}
   sourceOneShot: {fileID: 1200804164704388679}
+  sourceOneShotPlayer: {fileID: 1330468981465416847}
   audioClips:
     bgm: {fileID: 8300000, guid: 4cdd576588f61cd498654e4911636257, type: 3}
     buttonClick: {fileID: 8300000, guid: 119152f450475a144b4b74a9e6c8d7c9, type: 3}
@@ -447,6 +578,9 @@ MonoBehaviour:
     fightBgm: {fileID: 8300000, guid: 7f1bf1cdc481c274594de5d79709b29d, type: 3}
     zombieChase: {fileID: 8300000, guid: 1e232112a2c350a418af43e0ec4c67d0, type: 3}
     zombieDie: {fileID: 8300000, guid: fe8b97343e95d7b41b037d73b416651a, type: 3}
-    playerHurt: {fileID: 0}
+    playerHurt:
+    - {fileID: 8300000, guid: 304fb5e0475fee14084bed698f266cb1, type: 3}
+    - {fileID: 8300000, guid: 7bf95b78737d0d14887c9286f296ab79, type: 3}
+    - {fileID: 8300000, guid: 5b90f9067b93a524bb3d872a09224e66, type: 3}
     MissionFailed: {fileID: 8300000, guid: d17a78a1511d0354688bf85e6411aea9, type: 3}
     MissionPassed: {fileID: 8300000, guid: 7b6fb2154577eb544aee9a8979cd2d0e, type: 3}

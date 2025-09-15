@@ -314,13 +314,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201306401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.046676353, y: -0.9639437, z: 0.19652785, w: -0.17323586}
+  m_LocalRotation: {x: 0.046813965, y: -0.96302164, z: 0.19936311, w: -0.1750778}
   m_LocalPosition: {x: 63.1, y: 3, z: 36.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 21.267, y: -202.214, z: -9.766}
+  m_LocalEulerAnglesHint: {x: 21.567, y: -202.499, z: -9.905}
 --- !u!114 &1201306404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: a6d3338c2b28e71488d3178229c43f8f, type: 2}
+  sharedProfile: {fileID: 11400000, guid: a8c5dd9b018b1674b82eda2a26909bae, type: 2}
 --- !u!4 &1540813510
 Transform:
   m_ObjectHideFlags: 0
@@ -581,14 +581,14 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 1
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
+  m_Aperture: 4.76
+  m_FocusDistance: 5.01
+  m_FocalLength: 20.78461
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -603,7 +603,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
